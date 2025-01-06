@@ -11,7 +11,7 @@ export const useSocket = () => {
 
 export const SocketProvider = ({ children }) => {
   const socket = useRef();
-  const { userInfo, selectedChatData, selectedChatType, addMessage } = useAppStore();
+  const { userInfo, selectedChatData, selectedChatType, addMessage,addChannelInChannelList,addContactsInDMContacts } = useAppStore();
 
   useEffect(() => {
     if (userInfo) {
