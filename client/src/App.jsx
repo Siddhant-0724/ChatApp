@@ -79,7 +79,7 @@ const App = () => {
     } else {
       setLoading(false); // Already has userInfo
     }
-  }, [userInfo, setUserInfo]]); // Only run once when the component mounts
+  }, [userInfo, setUserInfo]); // Only run once when the component mounts
 
   if (loading) {
     return <div>Loading...</div>;
