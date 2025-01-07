@@ -31,7 +31,7 @@ export const signUp = async (req, res, next) => {
 
     // Set cookie with token
     res.cookie("jwt", token, {
-      maxAge
+      maxAge,
     });
 
     // Return success response
@@ -74,7 +74,7 @@ export const login = async (req, res, next) => {
 
     // Set cookie with token
     res.cookie("jwt", token, {
-      maxAge
+      maxAge,
     });
 
     // Return success response
@@ -217,7 +217,7 @@ export const deleteProfileImg = async (req, res, next) => {
 
 export const logout = async (req, res, next) => {
   try {
-   res.cookie("jwt","",{maxAge:1})
+   res.cookie("jwt","",{maxAge:1,})
     return res.status(200).send("Logout Sucessfull")
   } catch (error) {
     console.error({ error });
